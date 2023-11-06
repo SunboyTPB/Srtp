@@ -1,4 +1,30 @@
 .home {
     height: 100vh;
     background-color: blue;
+    text-align: center;
+}
+
+.content {
+    height: 100vh;
+    display: flex;
+}
+
+.content_menu {
+    width: 20%;
+}
+
+.content_content {
+    
+}
+
+.logo {
+    height: 50%;
+}
+
+.buttons {
+    height: 50%;
+}
+
+.qrcode {
+    display: none;
 }
