@@ -6,13 +6,12 @@ function Home() {
     const [contentTitle, setContentTitle] = useState();
     const chooseforcontent = (event) => {
         setContentTitle(event.target.id);
-        console.log(contentTitle);
     }
     return (
         <>
         <div className="home">
             <div className="logo">
-                <h1 style={{"paddingTop": "200px"}}>SRTP项目组题目测试</h1>
+                <h1 style={{"paddingTop": "200px", "color": "white", "position": "absolute", "margin": "auto", "left": 0, "right": 0}}>SRTP项目组题目测试</h1>
             </div>
             <div className="buttons">
                 <Button variant="contained" style={{"marginRight": "20%"}}>安卓</Button>
@@ -23,21 +22,12 @@ function Home() {
             </div>
         </div>
         <div className="content">
-            <div className="content_menu" >
-                <List id="menu" onClick={chooseforcontent}>
-                    <ListItemButton id="关于公司">
-                        <ListItemText id="关于公司" primary="关于公司" />
-                    </ListItemButton>
-                    <ListItemButton id="公司职责">
-                        <ListItemText primary="公司职责" />
-                    </ListItemButton>
-                    <ListItemButton id="特色功能">
-                        <ListItemText primary="特色功能" />
-                    </ListItemButton>
-                </List>
+            <div className="content_menu" onClick={chooseforcontent}>
+                <Button fullWidth id="公司简介">公司简介</Button>
+                <Button fullWidth id="关于我们">关于我们</Button>
             </div>
             <div className="content_content">
-                
+                <h1>{contentTitle}</h1>
             </div>
         </div>
         </>

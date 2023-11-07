@@ -7,14 +7,16 @@
 .content {
     height: 100vh;
     display: flex;
+    position: relative;
 }
 
 .content_menu {
     width: 20%;
+    position: absolute;
 }
 
 .content_content {
-    
+    margin-left: 30%;
 }
 
 .logo {
