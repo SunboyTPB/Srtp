@@ -3,7 +3,7 @@ import {React, useState} from "react";
 import "./Theme.css";
 
 function Home() {
-    const [contentTitle, setContentTitle] = useState();
+    const [contentTitle, setContentTitle] = useState("公司简介");
     const chooseforcontent = (event) => {
         setContentTitle(event.target.id);
     }
