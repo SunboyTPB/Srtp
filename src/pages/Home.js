@@ -10,6 +10,9 @@ function Home() {
     return (
         <>
         <div className="home">
+            <div className="login">
+                
+            </div>
             <div className="logo">
                 <h1 style={{"paddingTop": "200px", "color": "white", "position": "absolute", "margin": "auto", "left": 0, "right": 0}}>SRTP项目组题目测试</h1>
             </div>
