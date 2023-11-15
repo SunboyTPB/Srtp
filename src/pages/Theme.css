@@ -1,7 +1,6 @@
 .home {
     height: 100vh;
     background-color: blue;
-    text-align: center;
 }
 
 .content {
@@ -10,6 +9,14 @@
     position: relative;
 }
 
+.link:hover {
+    color: rgb(255, 186, 186);
+    cursor: pointer;
+}
+
+.link:active {
+    color: red;
+}
 .content_menu {
     width: 20%;
     position: absolute;
