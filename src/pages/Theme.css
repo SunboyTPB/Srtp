@@ -1,6 +1,10 @@
 .home {
     height: 100vh;
-    background-color: blue;
+    background-color: rgba(0, 0, 0, 0.815);
+    background-image: url("../media/downloadbackground.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 .content {

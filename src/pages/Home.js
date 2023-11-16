@@ -16,6 +16,18 @@ function Home() {
     const handleopenLogin = () => {
         setOpenLogin(true);
     }
+
+    const [openSignup, setOpenSignup] = useState(false);
+    const handlecloseSignup = () => {
+        setOpenSignup(false);
+    }
+    const handleopenSignup = () => {
+        setOpenSignup(true);
+    }
+    const LogintoSignup = () => {
+        setOpenLogin(false);
+        setOpenSignup(true);
+    }
     return (
         <>
         <div className="home">
@@ -54,8 +66,25 @@ function Home() {
             </DialogContent>
             <DialogActions>
                 <Button onClick={handlecloseLogin}>取消</Button>
-                <Button>进入注册</Button>
+                <Button onClick={LogintoSignup}>进入注册</Button>
                 <Button>登录</Button>
+            </DialogActions>
+        </Dialog>
+        <Dialog open={openSignup}>
+            <DialogTitle>
+                注册
+            </DialogTitle>
+            <DialogContent>
+                <DialogContentText>您好，请注册SRTP账号！</DialogContentText>
+                <TextField fullWidth label="用户名" style={{"marginTop": "10px"}} />
+                <TextField fullWidth label="手机号" style={{"marginTop": "10px"}} />
+                <TextField fullWidth label="验证码" style={{"marginTop": "10px"}} />
+                <TextField fullWidth label="密码" style={{"marginTop": "10px"}} />
+                <TextField fullWidth label="确认密码" style={{"marginTop": "10px"}} />
+            </DialogContent>
+            <DialogActions>
+                <Button onClick={handlecloseSignup}>取消</Button>
+                <Button>注册</Button>
             </DialogActions>
         </Dialog>
         </>
