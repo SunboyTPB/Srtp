@@ -30,9 +30,19 @@ function Home() {
     }
     return (
         <>
-        <div className="home">
+        <div className="title" style={{"backgroundColor": "blue", "height": "50px", "display": "flex", "alignItems": "center"}}>
+            <div style={{"width": "50%", }}>
+                <a onClick={handleopenLogin} className="link">登录</a>
+            </div>
+            <div style={{"width": "50%", "justifyContent": "right", "display": "flex", "paddingRight": "10%"}}>
+                <a className="link" href="#home">主页</a>
+                <a className="link" href="#content">介绍</a>
+                <a className="link">活动</a>
+                <a className="link">关于</a>
+            </div>
+        </div>
+        <div id="home" className="home">
             <div className="login" style={{"paddingLeft": "10px", "paddingTop": "10px"}}>
-                <p onClick={handleopenLogin} className="link" style={{"width": "50px"}}>登录</p>
             </div>
             <div className="logo" style={{"textAlign": "center"}}>
                 <h1 style={{"paddingTop": "200px", "color": "white", "position": "absolute", "margin": "auto", "left": 0, "right": 0}}>SRTP项目组题目测试</h1>
@@ -46,7 +56,7 @@ function Home() {
                 
             </div>
         </div>
-        <div className="content">
+        <div id="content" className="content">
             <div className="content_menu" onClick={chooseforcontent}>
                 <Button fullWidth id="公司简介">公司简介</Button>
                 <Button fullWidth id="关于我们">关于我们</Button>
@@ -67,6 +77,7 @@ function Home() {
             <DialogActions>
                 <Button onClick={handlecloseLogin}>取消</Button>
                 <Button onClick={LogintoSignup}>进入注册</Button>
+                <Button>忘记密码</Button>
                 <Button>登录</Button>
             </DialogActions>
         </Dialog>
@@ -84,6 +95,7 @@ function Home() {
             </DialogContent>
             <DialogActions>
                 <Button onClick={handlecloseSignup}>取消</Button>
+                <Button>发送验证码</Button>
                 <Button>注册</Button>
             </DialogActions>
         </Dialog>
