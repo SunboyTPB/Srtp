@@ -48,3 +48,22 @@
 .qrcode {
     display: none;
 }
+
+.classicButton {
+    border-radius: 51px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+    border-color: rgba(249, 0, 0, 0);
+    background: linear-gradient(88deg, #693D3D 44%, #A76853 118%);
+    color: white;
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35);
+}
+
+.classicButton:hover {
+    background: linear-gradient(88deg, #A76853 44%, #693D3D 118%);
+}
+
+.classicButton:active {
+    background: linear-gradient(88deg, #A76853 44%, #693D3D 118%);
+}

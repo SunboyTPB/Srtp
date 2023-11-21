@@ -48,9 +48,9 @@ function Home() {
                 <h1 style={{"paddingTop": "200px", "color": "white", "position": "absolute", "margin": "auto", "left": 0, "right": 0}}>SRTP项目组题目测试</h1>
             </div>
             <div className="buttons" style={{"textAlign": "center"}}>
-                <Button variant="contained" style={{"marginRight": "10%"}}>安卓</Button>
-                <Button variant="contained" style={{"marginRight": "10%"}}>苹果</Button>
-                <Button variant="contained">网页</Button>
+                <button className="classicButton" style={{"marginRight": "10%"}}>安卓</button>
+                <button className="classicButton" style={{"marginRight": "10%"}}>苹果</button>
+                <button className="classicButton">网页</button>
             </div>
             <div className="qrcode">
                 
@@ -75,10 +75,10 @@ function Home() {
                 <TextField fullWidth label="密码" />
             </DialogContent>
             <DialogActions>
-                <Button onClick={handlecloseLogin}>取消</Button>
-                <Button onClick={LogintoSignup}>进入注册</Button>
-                <Button>忘记密码</Button>
-                <Button>登录</Button>
+                <button className="classicButton" onClick={handlecloseLogin}>取消</button>
+                <button className="classicButton" onClick={LogintoSignup}>进入注册</button>
+                <button className="classicButton">忘记密码</button>
+                <button className="classicButton">登录</button>
             </DialogActions>
         </Dialog>
         <Dialog open={openSignup}>
@@ -88,15 +88,15 @@ function Home() {
             <DialogContent>
                 <DialogContentText>您好，请注册SRTP账号！</DialogContentText>
                 <TextField fullWidth label="用户名" style={{"marginTop": "10px"}} />
-                <TextField fullWidth label="手机号" style={{"marginTop": "10px"}} />
+                <TextField label="手机号" style={{"marginTop": "10px"}} />
+                <Button>发送验证码</Button>
                 <TextField fullWidth label="验证码" style={{"marginTop": "10px"}} />
                 <TextField fullWidth label="密码" style={{"marginTop": "10px"}} />
                 <TextField fullWidth label="确认密码" style={{"marginTop": "10px"}} />
             </DialogContent>
             <DialogActions>
-                <Button onClick={handlecloseSignup}>取消</Button>
-                <Button>发送验证码</Button>
-                <Button>注册</Button>
+                <button className="classicButton" onClick={handlecloseSignup}>取消</button>
+                <button className="classicButton">注册</button>
             </DialogActions>
         </Dialog>
         </>
