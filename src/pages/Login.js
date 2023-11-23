@@ -1,8 +1,10 @@
-import { Box, Tabs, Tab } from "@mui/material";
+import { Box, Tabs, Tab, createTheme, ThemeProvider } from "@mui/material";
 import React, { useState } from "react";
 import Typography from '@mui/material/Typography';
 import PropTypes from 'prop-types';
 import PasswordLogin from "./PasswordLogin";
+
+
 
 function CustomTabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -38,6 +40,13 @@ function a11yProps(index) {
     };
 }
 function Login() {
+    const theme = createTheme({
+        palette: {
+            primary: {
+                main: "#693d3d"
+            }
+        }
+    })
     const [value, setValue] = useState(0);
 
     const handleChange = (event, newValue) => {
@@ -52,10 +61,12 @@ function Login() {
                 </div>
                 <div style={{"width": "60%"}}>
                     <Box>
-                        <Tabs style={{"fontSize": "30px"}} value={value} onChange={handleChange}>
-                            <Tab style={{"fontFamily": "Siyuansong"}} label="密码登录" />
-                            <Tab style={{"fontFamily": "Siyuansong"}} label="验证码登录" />
-                        </Tabs>
+                        <ThemeProvider theme={theme}>
+                            <Tabs style={{"fontSize": "30px"}} value={value} onChange={handleChange}>
+                                <Tab style={{"fontFamily": "Siyuansong"}} label="密码登录" />
+                                <Tab style={{"fontFamily": "Siyuansong"}} label="验证码登录" />
+                            </Tabs>
+                        </ThemeProvider>
                     </Box>
                     <CustomTabPanel value={value} index={0}>
                         <PasswordLogin />

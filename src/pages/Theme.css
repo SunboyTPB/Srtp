@@ -18,12 +18,12 @@
 }
 
 .link:hover {
-    color: rgb(255, 186, 186);
+    color: #693D3D;
     cursor: pointer;
 }
 
 .link:active {
-    color: red;
+    color: #392121;
 }
 .content_menu {
     width: 20%;
