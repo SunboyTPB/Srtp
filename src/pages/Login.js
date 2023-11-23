@@ -53,8 +53,8 @@ function Login() {
                 <div style={{"width": "60%"}}>
                     <Box>
                         <Tabs style={{"fontSize": "30px"}} value={value} onChange={handleChange}>
-                            <Tab label="密码登录" />
-                            <Tab label="验证码登录" />
+                            <Tab style={{"fontFamily": "Siyuansong"}} label="密码登录" />
+                            <Tab style={{"fontFamily": "Siyuansong"}} label="验证码登录" />
                         </Tabs>
                     </Box>
                     <CustomTabPanel value={value} index={0}>
