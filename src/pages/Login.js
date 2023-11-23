@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Typography from '@mui/material/Typography';
 import PropTypes from 'prop-types';
 import PasswordLogin from "./PasswordLogin";
+import ValidateLogin from "./ValidateLogin";
 
 
 
@@ -72,7 +73,7 @@ function Login() {
                         <PasswordLogin />
                     </CustomTabPanel>
                     <CustomTabPanel value={value} index={1}>
-                        验证码登录
+                        <ValidateLogin />
                     </CustomTabPanel>
                 </div>
             </div>
