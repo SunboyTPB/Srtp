@@ -1,5 +1,4 @@
-# Getting Started with Create React App
-
+# 通过Create React App开始运行和编辑本应用！
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -8,11 +7,11 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+在开发者模式下运行本应用：\
+在浏览器可以通过 [http://localhost:3000](http://localhost:3000) 来看到.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+当你对本产品做出编辑的时候，浏览器就会重新渲染.\
+若有错误信息，将会从控制台和浏览器看到.
 
 ### `npm test`
 
@@ -21,8 +20,8 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+在名为'build'的文件夹中，创造本应用的最终成果。\
+build文件夹中的产品将不再支持开发者模式，作为“最终产品模式”而运行！
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
