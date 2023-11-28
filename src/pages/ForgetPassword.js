@@ -13,7 +13,7 @@ function ForgetPassword() {
     return (
         <>
         <div style={{"height": "100vh", "backgroundColor": "#693D3D"}}>
-            <div style={{"fontFamily": "Siyuansong", "width": "40%", "height": "60%", "position": "absolute", "margin": "auto", "left": 0, "right": 0, "top": 0, "bottom": 0, "backgroundColor": "white", "boxShadow": "black 0px 0px 10px", "borderRadius": "10px", "display": "flex", "justifyContent": "center", "alignItems": "center"}}>
+            <div style={{"fontFamily": "Siyuansong", "width": "40%", "height": "550px", "position": "absolute", "margin": "auto", "left": 0, "right": 0, "top": 0, "bottom": 0, "backgroundColor": "white", "boxShadow": "black 0px 0px 10px", "borderRadius": "10px", "display": "flex", "justifyContent": "center", "alignItems": "center"}}>
                 <div style={{"width": "90%"}}>
                     <div style={{"marginTop": "10px"}}>手机号</div>
                     <div style={{"marginTop": "10px"}}>
