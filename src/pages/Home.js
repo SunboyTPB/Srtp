@@ -35,8 +35,19 @@ function Home() {
                 <Button fullWidth>Test News 11</Button>
             </div>
         </div>
-        <div style={{"width": "100%", "height": "600px", "marginTop": "20px"}}>
-            <div style={{"fontWeight": "bolder", "fontSize": "35px", "marginLeft": "50px"}}>公司近期活动</div>
+        <div style={{"fontWeight": "bolder", "fontSize": "35px", "marginLeft": "50px", "marginTop": "20px"}}>公司近期活动</div>
+        <div style={{"width": "100%", "height": "500px", "display": "flex", "overflowX": "scroll"}}>
+            <div style={{"marginLeft": "10px", "width": "400px", "height": "100%"}}>NEWS</div>
+            <div style={{"marginLeft": "10px", "width": "400px", "height": "100%"}}>NEWS</div>
+            <div style={{"marginLeft": "10px", "width": "400px", "height": "100%"}}>NEWS</div>
+            <div style={{"marginLeft": "10px", "width": "400px", "height": "100%"}}>NEWS</div>
+            <div style={{"marginLeft": "10px", "width": "400px", "height": "100%"}}>NEWS</div>
+            <div style={{"marginLeft": "10px", "width": "400px", "height": "100%"}}>NEWS</div>
+            <div style={{"marginLeft": "10px", "width": "400px", "height": "100%"}}>NEWS</div>
+            <div style={{"marginLeft": "10px", "width": "400px", "height": "100%"}}>NEWS</div>
+            <div style={{"marginLeft": "10px", "width": "400px", "height": "100%"}}>NEWS</div>
+            <div style={{"marginLeft": "10px", "width": "400px", "height": "100%"}}>NEWS</div>
+            <div style={{"marginLeft": "10px", "width": "400px", "height": "100%"}}>NEWS</div>
         </div>
         </>
     )
