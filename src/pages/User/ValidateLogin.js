@@ -1,8 +1,14 @@
 import React from "react";
-import "./Theme.css";
+import "../Theme.css";
 import { Button, createTheme, ThemeProvider } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 function ValidateLogin() {
+    const navigate = useNavigate();
+
+    const signup = () => {
+        navigate("/signup")
+    }
     const theme = createTheme({
         palette: {
             primary: {
@@ -26,8 +32,9 @@ function ValidateLogin() {
         <div>
             <a style={{"fontSize": "10px", "fontFamily": "Siyuansong"}} className="link">未收到验证码？</a>
         </div>
-        <div>
-            <button className="classicButton" style={{"fontFamily": "Siyuansong", "marginTop": "10px"}}>立即登录</button>
+        <div style={{"display": "flex", "flexDirection": "column"}}>
+            <button className="classicButton" style={{"fontFamily": "Siyuansong", "marginTop": "10px", "width": "150px"}}>立即登录</button>
+            <a style={{"fontSize": "10px", "fontFamily": "Siyuansong", "width": "150px"}} className="link" onClick={signup}>没有账号？注册账号</a>
         </div>
         </>
     )

@@ -1,5 +1,5 @@
 import React from "react";
-import "./Theme.css";
+import "../Theme.css";
 import { useNavigate } from "react-router-dom";
 
 function PasswordLogin() {
@@ -7,6 +7,9 @@ function PasswordLogin() {
 
     const forget = () => {
         navigate("/forgetpassword");
+    }
+    const signup = () => {
+        navigate("/signup")
     }
     return (
         <>
@@ -21,8 +24,9 @@ function PasswordLogin() {
         <div>
             <a style={{"fontSize": "10px", "fontFamily": "Siyuansong"}} className="link" onClick={forget}>密码丢失？找回账号</a>
         </div>
-        <div>
-            <button className="classicButton" style={{"fontFamily": "Siyuansong", "marginTop": "10px"}}>立即登录</button>
+        <div style={{"display": "flex", "flexDirection": "column"}}>
+            <button className="classicButton" style={{"fontFamily": "Siyuansong", "marginTop": "10px", "width": "150px"}}>立即登录</button>
+            <a style={{"fontSize": "10px", "fontFamily": "Siyuansong", "width": "150px"}} className="link" onClick={signup}>没有账号？注册账号</a>
         </div>
         </>
     )
