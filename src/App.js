@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Login from './pages/User/Login';
 import Signup from './pages/User/Signup';
 import ForgetPassword from './pages/User/ForgetPassword';
+import Download from './pages/Download';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Route path='/login' element={<Login />} />
       <Route path='/signup'  element={<Signup />} />
       <Route path='/forgetpassword' element={<ForgetPassword />} />
+      <Route path='/download' element={<Download />} />
     </Routes>
   );
 }
