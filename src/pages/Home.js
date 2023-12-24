@@ -1,3 +1,5 @@
+//我这边添加了新的模块，请使用npm install将所有模块更新安装之后再运行npm start!
+
 import { Button, List, ListSubheader,  ListItemButton, ListItemText, Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions, TextField } from "@mui/material";
 import {React, useEffect, useState} from "react";
 import "./Theme.css";
@@ -8,6 +10,10 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { useNavigate } from "react-router-dom";
+import SystemUpdateAltIcon from '@mui/icons-material/SystemUpdateAlt';
+import InfoIcon from '@mui/icons-material/Info';
+import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+import EventIcon from '@mui/icons-material/Event';
 
 
 function Home() {
@@ -32,28 +38,21 @@ function Home() {
                 </Swiper>
             </div>
             <div style={{"width": "40%"}}>
-                <Button fullWidth>Test News 1</Button>
-                <Button fullWidth>Test News 2</Button>
-                <Button fullWidth>Test News 3</Button>
-                <Button fullWidth>Test News 4</Button>
-                <Button fullWidth>Test News 5</Button>
-                <Button fullWidth>Test News 6</Button>
-                <Button fullWidth>Test News 7</Button>
-                <Button fullWidth>Test News 8</Button>
-                <Button fullWidth>Test News 9</Button>
-                <Button fullWidth>Test News 10</Button>
-                <Button fullWidth>Test News 11</Button>
+                <Button style={{"height": "25%", "fontSize": "20px", "backgroundColor": "#693D3D"}} variant="contained" fullWidth startIcon={<EventIcon />}>公司近期活动</Button>
+                <Button style={{"height": "25%", "fontSize": "20px", "backgroundColor": "#693D3D"}} variant="contained" fullWidth startIcon={<ShoppingBagIcon />}>交易管理</Button>
+                <Button style={{"height": "25%", "fontSize": "20px", "backgroundColor": "#693D3D"}} variant="contained" fullWidth startIcon={<InfoIcon />}>关于公司</Button>
+                <Button style={{"height": "25%", "fontSize": "20px", "backgroundColor": "#693D3D"}} variant="contained" fullWidth startIcon={<SystemUpdateAltIcon />}>客户端下载</Button>
             </div>
         </div>
         <div style={{"fontWeight": "bolder", "fontSize": "35px", "marginLeft": "50px", "marginTop": "20px"}}>公司近期活动</div>
-        <div style={{"width": "100%", "height": "500px", "display": "flex", "overflowX": "scroll"}}>
-            <div style={{"width": "25%", "marginLeft": "10px", "height": "100%", "flexShrink": 0}}>TEST</div>
-            <div style={{"width": "25%", "marginLeft": "10px", "height": "100%", "flexShrink": 0}}>TEST</div>
-            <div style={{"width": "25%", "marginLeft": "10px", "height": "100%", "flexShrink": 0}}>TEST</div>
-            <div style={{"width": "25%", "marginLeft": "10px", "height": "100%", "flexShrink": 0}}>TEST</div>
-            <div style={{"width": "25%", "marginLeft": "10px", "height": "100%", "flexShrink": 0}}>TEST</div>
-            <div style={{"width": "25%", "marginLeft": "10px", "height": "100%", "flexShrink": 0}}>TEST</div>
-            <div style={{"width": "25%", "marginLeft": "10px", "height": "100%", "flexShrink": 0}}>TEST</div>
+        <div style={{"width": "100%", "height": "500px", "display": "flex", "overflowX": "scroll", "marginTop": "20px"}}>
+            <div style={{"width": "400px", "marginLeft": "10px", "height": "100%", "flexShrink": 0}}>TEST</div>
+            <div style={{"width": "400px", "marginLeft": "10px", "height": "100%", "flexShrink": 0}}>TEST</div>
+            <div style={{"width": "400px", "marginLeft": "10px", "height": "100%", "flexShrink": 0}}>TEST</div>
+            <div style={{"width": "400px", "marginLeft": "10px", "height": "100%", "flexShrink": 0}}>TEST</div>
+            <div style={{"width": "400px", "marginLeft": "10px", "height": "100%", "flexShrink": 0}}>TEST</div>
+            <div style={{"width": "400px", "marginLeft": "10px", "height": "100%", "flexShrink": 0}}>TEST</div>
+            <div style={{"width": "400px", "marginLeft": "10px", "height": "100%", "flexShrink": 0}}>TEST</div>
         </div>
         </>
     )
