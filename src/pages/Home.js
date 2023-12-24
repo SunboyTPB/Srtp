@@ -2,15 +2,24 @@ import { Button, List, ListSubheader,  ListItemButton, ListItemText, Dialog, Dia
 import {React, useEffect, useState} from "react";
 import "./Theme.css";
 import Title from "./Title";
+import {Swiper, SwiperSlide} from "swiper/react";
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+
 
 function Home() {
     const [imagenumber, setImagenumber] = useState(0);
+    const [newsImage, setNewsImage] = useState("../media/demonews/demonews0.png");
     useEffect(() => {
         setTimeout(() => {
             if(imagenumber < 5) {
                 setImagenumber(imagenumber + 1);
+                setNewsImage("../media/demonews/demonews" + imagenumber + ".png");
             } else {
                 setImagenumber(0);
+                setNewsImage("../media/demonews/demonews0.png");
             }
         }, 5000)
     })
@@ -19,7 +28,20 @@ function Home() {
         <Title />
         <div style={{"display": "flex", "width": "100%", "height": "400px"}}>
             <div style={{"width": "60%"}}>
-                {imagenumber}
+                <Swiper style={{"width": "100%", "height": "100%"}} spaceBetween={50} centeredSlides={true} autoplay={{delay: 2500, disableOnInteraction: false}} pagination={{clickable: true}} navigation={true} modules={[Autoplay, Pagination, Navigation]}>
+                    <SwiperSlide style={{"width": "100%", "height": "100%"}}>
+                        <img src={require("../media/demonews/demonews0.png")} style={{"width": "100%", "height": "100%"}} />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img src={require("../media/demonews/demonews1.png")} style={{"width": "100%", "height": "100%"}} />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img src={require("../media/demonews/demonews2.png")} style={{"width": "100%", "height": "100%"}} />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img src={require("../media/demonews/demonews3.png")} style={{"width": "100%", "height": "100%"}} />
+                    </SwiperSlide>
+                </Swiper>
             </div>
             <div style={{"width": "40%"}}>
                 <Button fullWidth>Test News 1</Button>
@@ -37,17 +59,13 @@ function Home() {
         </div>
         <div style={{"fontWeight": "bolder", "fontSize": "35px", "marginLeft": "50px", "marginTop": "20px"}}>公司近期活动</div>
         <div style={{"width": "100%", "height": "500px", "display": "flex", "overflowX": "scroll"}}>
-            <div style={{"marginLeft": "10px", "width": "400px", "height": "100%"}}>NEWS</div>
-            <div style={{"marginLeft": "10px", "width": "400px", "height": "100%"}}>NEWS</div>
-            <div style={{"marginLeft": "10px", "width": "400px", "height": "100%"}}>NEWS</div>
-            <div style={{"marginLeft": "10px", "width": "400px", "height": "100%"}}>NEWS</div>
-            <div style={{"marginLeft": "10px", "width": "400px", "height": "100%"}}>NEWS</div>
-            <div style={{"marginLeft": "10px", "width": "400px", "height": "100%"}}>NEWS</div>
-            <div style={{"marginLeft": "10px", "width": "400px", "height": "100%"}}>NEWS</div>
-            <div style={{"marginLeft": "10px", "width": "400px", "height": "100%"}}>NEWS</div>
-            <div style={{"marginLeft": "10px", "width": "400px", "height": "100%"}}>NEWS</div>
-            <div style={{"marginLeft": "10px", "width": "400px", "height": "100%"}}>NEWS</div>
-            <div style={{"marginLeft": "10px", "width": "400px", "height": "100%"}}>NEWS</div>
+            <div style={{"width": "25%", "marginLeft": "10px", "height": "100%", "flexShrink": 0}}>TEST</div>
+            <div style={{"width": "25%", "marginLeft": "10px", "height": "100%", "flexShrink": 0}}>TEST</div>
+            <div style={{"width": "25%", "marginLeft": "10px", "height": "100%", "flexShrink": 0}}>TEST</div>
+            <div style={{"width": "25%", "marginLeft": "10px", "height": "100%", "flexShrink": 0}}>TEST</div>
+            <div style={{"width": "25%", "marginLeft": "10px", "height": "100%", "flexShrink": 0}}>TEST</div>
+            <div style={{"width": "25%", "marginLeft": "10px", "height": "100%", "flexShrink": 0}}>TEST</div>
+            <div style={{"width": "25%", "marginLeft": "10px", "height": "100%", "flexShrink": 0}}>TEST</div>
         </div>
         </>
     )
