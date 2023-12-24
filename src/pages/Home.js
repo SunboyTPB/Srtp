@@ -7,22 +7,10 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { useNavigate } from "react-router-dom";
 
 
 function Home() {
-    const [imagenumber, setImagenumber] = useState(0);
-    const [newsImage, setNewsImage] = useState("../media/demonews/demonews0.png");
-    useEffect(() => {
-        setTimeout(() => {
-            if(imagenumber < 5) {
-                setImagenumber(imagenumber + 1);
-                setNewsImage("../media/demonews/demonews" + imagenumber + ".png");
-            } else {
-                setImagenumber(0);
-                setNewsImage("../media/demonews/demonews0.png");
-            }
-        }, 5000)
-    })
     return (
         <>
         <Title />
